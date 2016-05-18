@@ -1,0 +1,2 @@
+workflow-aggregator:2.1
+openshift-pipeline:1.0.11
