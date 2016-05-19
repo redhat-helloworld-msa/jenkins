@@ -25,7 +25,7 @@ matrix-project:1.4.1
 maven-plugin:2.7.1
 momentjs:1.1.1
 openshift-deployer:1.2.0
-openshift-pipeline:1.0.11
+openshift-pipeline:1.0.12
 pam-auth:1.1
 pipeline-build-step:2.0
 pipeline-input-step:2.0
