@@ -4,7 +4,6 @@ antisamy-markup-formatter:1.1
 branch-api:1.8
 cloudbees-folder:5.10
 cvs:2.11
-durable-task:1.7
 external-monitor-job:1.4
 git-client:1.19.6
 git-server:1.6
@@ -16,7 +15,6 @@ icon-shim:2.0.3
 javadoc:1.1
 jquery-detached:1.2.1
 junit:1.2-beta-4
-kubernetes:0.6
 ldap:1.11
 mailer:1.11
 mapdb-api:1.0.6.0
@@ -25,7 +23,6 @@ matrix-project:1.4.1
 maven-plugin:2.7.1
 momentjs:1.1.1
 openshift-deployer:1.2.0
-openshift-pipeline:1.0.12
 pam-auth:1.1
 pipeline-build-step:2.0
 pipeline-input-step:2.0
@@ -53,4 +50,3 @@ workflow-multibranch:2.3
 workflow-scm-step:2.0
 workflow-step-api:2.0
 workflow-support:2.0
-credentials:1.24
