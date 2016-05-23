@@ -44,4 +44,5 @@
       <ignorePostCommitHooks>false</ignorePostCommitHooks>
     </hudson.triggers.SCMTrigger>
   </triggers>
+  <authToken>MyAuthToken</authToken>
 </flow-definition>
