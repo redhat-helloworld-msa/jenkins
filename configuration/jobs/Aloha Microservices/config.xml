@@ -8,11 +8,16 @@
       <parameterDefinitions>
         <com.cloudbees.plugins.credentials.CredentialsParameterDefinition plugin="credentials@2.0">
           <name>openshift-dev</name>
-          <description></description>
+          <description>OpenShift credentials</description>
           <defaultValue>openshift-dev</defaultValue>
           <credentialType>org.csanchez.jenkins.plugins.kubernetes.OpenShiftBearerTokenCredentialImpl</credentialType>
           <required>true</required>
         </com.cloudbees.plugins.credentials.CredentialsParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>OPENSHIFT</name>
+          <description>OpenShift master IP address</description>
+          <defaultValue>10.1.2.2</defaultValue>
+        </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
