@@ -16,7 +16,7 @@
         <hudson.model.StringParameterDefinition>
           <name>OPENSHIFT</name>
           <description>OpenShift master IP address</description>
-          <defaultValue>10.1.2.2</defaultValue>
+          <defaultValue>https://kubernetes.default.svc.cluster.local</defaultValue>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
