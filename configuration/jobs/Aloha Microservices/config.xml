@@ -1,12 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<flow-definition plugin="workflow-job@2.2">
+<flow-definition plugin="workflow-job@2.9">
   <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
+    <io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty plugin="openshift-sync@0.1.6">
+      <uid></uid>
+      <namespace></namespace>
+      <name></name>
+      <resourceVersion></resourceVersion>
+    </io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.24.0">
+      <projectUrl>https://github.com/redhat-helloworld-msa/aloha/</projectUrl>
+      <displayName></displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
-        <com.cloudbees.plugins.credentials.CredentialsParameterDefinition plugin="credentials@2.0">
+        <com.cloudbees.plugins.credentials.CredentialsParameterDefinition plugin="credentials@2.1.10">
           <name>openshift-dev</name>
           <description>OpenShift credentials</description>
           <defaultValue>openshift-dev</defaultValue>
@@ -20,9 +30,20 @@
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
+    <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+      <triggers>
+        <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.24.0">
+          <spec></spec>
+        </com.cloudbees.jenkins.GitHubPushTrigger>
+        <hudson.triggers.SCMTrigger>
+          <spec>* * * * *</spec>
+          <ignorePostCommitHooks>false</ignorePostCommitHooks>
+        </hudson.triggers.SCMTrigger>
+      </triggers>
+    </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
   </properties>
-  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.2">
-    <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.4">
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.23">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@3.0.1">
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
@@ -40,14 +61,5 @@
     </scm>
     <scriptPath>Jenkinsfile</scriptPath>
   </definition>
-  <triggers>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.19.1">
-      <spec></spec>
-    </com.cloudbees.jenkins.GitHubPushTrigger>
-    <hudson.triggers.SCMTrigger>
-      <spec>* * * * *</spec>
-      <ignorePostCommitHooks>false</ignorePostCommitHooks>
-    </hudson.triggers.SCMTrigger>
-  </triggers>
   <authToken>MyAuthToken</authToken>
 </flow-definition>
