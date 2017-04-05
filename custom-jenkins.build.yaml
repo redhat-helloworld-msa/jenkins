@@ -5,7 +5,7 @@ metadata:
 spec:
   source:
     git:
-      uri: https://github.com/redhat-helloworld-msa/jenkins.git
+      uri: https://github.com/redhat-helloworld-msa/jenkins
     type: Git
   strategy:
     sourceStrategy:
