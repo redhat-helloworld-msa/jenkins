@@ -11,7 +11,7 @@ spec:
     sourceStrategy:
       from:
         kind: DockerImage
-        name: openshift/jenkins-2-centos7
+        name: registry.access.redhat.com/openshift3/jenkins-2-rhel7 
     type: Source
   output:
     to:
