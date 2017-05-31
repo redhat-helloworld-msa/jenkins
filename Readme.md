@@ -6,7 +6,7 @@ The detailed instructions to run *Red Hat Helloworld MSA* demo, can be found at 
 To update your plugins.txt
 --------------------------
 
-    export JENKINS_HOST=admin:password@jenkins-ci.rhel-cdk.10.1.2.2.xip.io
+    export JENKINS_HOST=developer:developer@jenkins-ci.<openshift-domain>
     curl -k -sSL "https://$JENKINS_HOST/pluginManager/api/xml?depth=1&xpath=/*/*/shortName|/*/*/version&wrapper=plugins" | perl -pe 's/.*?<shortName>([\w-]+).*?<version>([^<]+)()(<\/\w+>)+/\1 \2\n/g'|sed 's/ /:/' > plugins.txt
 
 
