@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  name: custom-jenkins-build
+spec:
+  source:
+    git:
+      uri: https://github.com/redhat-helloworld-msa/jenkins
+    type: Git
+  strategy:
+    sourceStrategy:
+      from:
+        kind: DockerImage
+        name: openshift/jenkins-2-centos7
+    type: Source
+  output:
+    to:
+      kind: ImageStreamTag
+      name: jenkins:latest
