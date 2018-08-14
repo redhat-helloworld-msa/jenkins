@@ -1,4 +1,4 @@
-#jenkins
+# jenkins - This project is DEPRECATED
 Custom Jenkins instance to do CI/CD builds
 
 The detailed instructions to run *Red Hat Helloworld MSA* demo, can be found at the following repository: <https://github.com/redhat-helloworld-msa/helloworld-msa>
